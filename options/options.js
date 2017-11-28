@@ -8,7 +8,7 @@ function saveOptions(e) {
 function restoreOptions() {
 
   function setCurrentChoice(result) {
-    document.querySelector("#timezoneLabel").value = result.timezoneLabel || "blue";
+    document.querySelector("#timezoneLabel").value = result.timezoneLabel || "";
   }
 
   function onError(error) {
