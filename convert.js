@@ -62,11 +62,14 @@ function appendTimezone(match) {
   return newString;
 }
 
-self.port.on("timezoneLabel", function(port_timezoneLabel) {
-  var d = new Date();
-  var offset = d.getTimezoneOffset();
-  timezoneOffset = (offset / 60);
+var getting = browser.storage.local.get("timezoneLabel");
+getting.then(function (results) {
+	timezoneLabel = result.timezoneLabel || "";
+}, onError)
 
-  timezoneLabel = port_timezoneLabel;
-  walk(document.body);
-});
+var d = new Date();
+var offset = d.getTimezoneOffset();
+timezoneOffset = (offset / 60);
+
+timezoneLabel = port_timezoneLabel;
+walk(document.body);
