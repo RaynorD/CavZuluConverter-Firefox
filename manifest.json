@@ -1,34 +1,40 @@
 {
 
 	"manifest_version": 2,
-	"name": "Zulu Timezone Converter",
 	"version": "1.2.0",
+	"name": "Zulu Timezone Converter",
+	
+	
+	"applications": {
+		"gecko": {
+			"id": "7cav.raynor.dave@gmail.com",
+			"update_url": "https://your_server/updates.json",
+			"strict_min_version": "52.0"
+		}
+	},
+
 	"author": "Dave Raynor",
 	
 	"description": "This extension appends a conversion to your local timezone after any zulu times on 7cav.us.",
-	
-	"default_locale": "en",
 	
 	"icons": {
 		"48": "img/icon48.png",
 		"96": "img/icon96.png"
 	},
-
+	
 	"content_scripts": [
 		{
-			"matches": ["*://7cav.us/*"],
+			"matches": ["*:///7cav.us/*"],
 			"js": ["convert.js"]
 		}
 	],
 
 	"options_ui": {
-		"page": "settings\options.html",
-		"browser_style": true
+		"page": "options/options.html"
 	},
 
 	"permissions": [
 		"storage",
 		"*://7cav.us/*"
 	]
-
 }
