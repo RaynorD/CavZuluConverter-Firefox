@@ -3,6 +3,12 @@
 	"manifest_version": 2,
 	"version": "1.2.0",
 	"name": "Zulu Timezone Converter",
+	
+	"applications": {
+		"gecko": {
+			"id": "@zuluconverter"
+		}
+	},
 
 	"author": "Dave Raynor",
 	
