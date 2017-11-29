@@ -4,12 +4,10 @@
 	"version": "1.2.0",
 	"name": "Zulu Timezone Converter",
 	
-	
 	"applications": {
 		"gecko": {
 			"id": "7cav.raynor.dave@gmail.com",
-			"update_url": "https://your_server/updates.json",
-			"strict_min_version": "52.0"
+			"update_url": "https://your_server/updates.json"
 		}
 	},
 
